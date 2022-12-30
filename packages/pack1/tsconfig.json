@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "incremental": true,
+    "jsx": "preserve",
+    "strict": false,
+    "plugins": [{ "name": "typescript-strict-plugin" }],
+    "paths": {
+      "~/*": ["src/*"]
+    },
+    "target": "ES2017"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../ui/types/*.ts",
+    "utils/contentSecurityPolicy.ts"
+  ],
+  "exclude": ["node_modules"]
+}
