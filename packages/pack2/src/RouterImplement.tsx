@@ -1,8 +1,7 @@
 import { useRouter } from "next/router"
-import { FC, ReactNode } from "react"
 
-export const RouterImplement: FC = ({children}: {children?: Element})=>{
+export const RouterImplement = ({children}: {children?: Element})=>{
   const router = useRouter()
-  console.log('router', router)
+  console.log('router', router.asPath)
   return <div><>test: {children}</></div>
 }
